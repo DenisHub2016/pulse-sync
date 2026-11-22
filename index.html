@@ -526,35 +526,6 @@
         // ---------------------------------------------------------
         // 1. DYNAMIC PWA MANIFEST INJECTION (For Mobile Install)
         // ---------------------------------------------------------
-        (function injectPWAManifest() {
-            try {
-                const manifest = {
-                    name: "PULSE SYNC — Reflex Arcade",
-                    short_name: "PULSE SYNC",
-                    description: "High-precision mobile reflex arcade game.",
-                    start_url: ".",
-                    display: "standalone",
-                    orientation: "portrait",
-                    background_color: "#070913",
-                    theme_color: "#00f5d4",
-                    icons: [
-                        {
-                            src: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='110' fill='%23070913'/><circle cx='256' cy='256' r='170' fill='none' stroke='%2300f5d4' stroke-width='28'/><circle cx='256' cy='256' r='76' fill='%23ff2a85'/></svg>",
-                            sizes: "512x512",
-                            type: "image/svg+xml"
-                        }
-                    ]
-                };
-                const blob = new Blob([JSON.stringify(manifest)], { type: 'application/json' });
-                const manifestURL = URL.createObjectURL(blob);
-                const link = document.createElement('link');
-                link.rel = 'manifest';
-                link.href = manifestURL;
-                document.head.appendChild(link);
-            } catch (e) {
-                console.warn("Manifest injection skipped:", e);
-            }
-        })();
 
         // ---------------------------------------------------------
         // 2. PROCEDURAL WEB AUDIO API SOUND ENGINE
