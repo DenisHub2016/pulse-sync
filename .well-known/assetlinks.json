@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "io.github.denishub2016.twa",
+        "sha256_cert_fingerprints": ["8F:88:8F:99:6A:CA:07:84:D3:E3:E7:D0:3A:99:91:68:14:5C:0D:AA:62:8B:74:C8:0B:CA:33:21:20:7B:AE:96"]
+      }
+    }]
